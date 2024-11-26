@@ -1,93 +1,79 @@
-<html>
-<head>
-    <style type="text/css">
-        @font-face {
-            font-family: 'Gilroy-Bold';
-            src: url('https://raw.githubusercontent.com/Mario1502/email-signature-assets/main/Gilroy-Bold.woff2') format('woff2'),
-                 url('https://raw.githubusercontent.com/Mario1502/email-signature-assets/main/Gilroy-Bold.woff') format('woff');
-        }
-
-        @font-face {
-            font-family: 'Gilroy-SemiBold';
-            src: url('https://raw.githubusercontent.com/Mario1502/email-signature-assets/main/Gilroy-SemiBold.woff2') format('woff2'),
-                 url('https://raw.githubusercontent.com/Mario1502/email-signature-assets/main/Gilroy-SemiBold.woff') format('woff');
-        }
-
-        @font-face {
-            font-family: 'Gilroy-Regular';
-            src: url('https://raw.githubusercontent.com/Mario1502/email-signature-assets/main/Gilroy-Regular.woff2') format('woff2'),
-                 url('https://raw.githubusercontent.com/Mario1502/email-signature-assets/main/Gilroy-Regular.woff') format('woff');
-        }
-    </style>
-</head>
-<body>
-    <table cellpadding="0" cellspacing="0" border="0" style="font-family: Arial, sans-serif; color: #000; width: 473px;">
+<div style="font-family: Arial, sans-serif; font-size: 11pt; line-height: 1.5; color: #404040;">
+    <table style="border-collapse: collapse; width: auto;">
+        <!-- Row 1: Single cell across the whole table -->
         <tr>
-            <td width="130" valign="top">
-                <table cellpadding="0" cellspacing="0" border="0">
-                    <tr>
-                    <td>
-                        <img src="https://raw.githubusercontent.com/Mario1502/email-signature-assets/main/ITRLogo.png" alt="Iceland Travel Logo" style="width: 100px; height: auto;">
-                    </td>
-                    <td width="10"></td>
-                    <td>
-                        <img src="https://raw.githubusercontent.com/Mario1502/email-signature-assets/main/LinePointDashThing.png" alt="PointLineDashThing" style="width: 17px; height: auto;">
-                    </td>
-                </tr>
-            </table>
-        </td>
-            <td width="30"></td>
-            <td width="313">
-                <table cellpadding="0" cellspacing="0" border="0">
-                    <tr>
-                        <td style="font-size: 14px; font-family: 'Gilroy-Bold', Arial, sans-serif; color: #000;">
-                            <b>{{ user.name }}</b>
-                        </td>
-                    </tr>
-                    <tr height="10"></tr>
-                    <tr>
-                        <td style="font-size: 12px; font-family: 'Gilroy-SemiBold', Arial, sans-serif; color: #333;">
-                            {{ user.job_title }}<br>Reservations
-                        </td>
-                    </tr>
-                    <tr height="20"></tr>
-                    <tr>
-                        <td style="font-size: 12px; font-family: 'Gilroy-Regular', Arial, sans-serif; color: #333;">
-                            +354 585 4553<br>
-                        </td>
-                    </tr>
-                    <tr height="10"></tr>
-                    <tr>
-                        <td style="font-size: 12px; font-family: 'Gilroy-Regular', Arial, sans-serif; color: #333;">
-                            <a href="mailto:{{ user.email }}" style="color: #1a73e8; text-decoration: none;">{{ user.email }}</a>
-                        </td>
-                    </tr>
-                </table>
+            <td colspan="3" style="text-align: center; padding: 5px;">
+                <img src="https://raw.githubusercontent.com/Mario1502/email-signature-assets/main/NV/NV.png" alt="Nordic Visitor" style="max-width: 50%; height: auto;">
             </td>
-            <td width="32"></td>
         </tr>
+
+        <!-- Row 2 -->
         <tr>
-            <td colspan="4" height="15"></td>
+            <td style="width: 5%; vertical-align: top; padding: 5px;"></td>
+            <td style="width: 50%; vertical-align: top; padding: 5px;"></td>
+            <td rowspan="6" style="width: 20%; text-align: center; vertical-align: top; padding: 5px;">
+                <img src="{{ user.avatar_url }}" alt="Profile Image" style="max-width: 100%; height: auto; border-radius: 50%;">
+            </td>
         </tr>
+
+        <!-- Row 3 -->
         <tr>
-            <td colspan="2"></td>
-            <td>
-                <table cellpadding="0" cellspacing="0" border="0">
-                    <tr>
-                        <td>
-                            <a href="https://www.tripadvisor.com/Attraction_Review-g189970-d2331129-Reviews-Iceland_Travel-Reykjavik_Capital_Region.html"><img src="https://raw.githubusercontent.com/Mario1502/email-signature-assets/main/LinkedIn.png" alt="Iceland Travel LinkedIn" style="width: 24px; height: auto; margin-right: 5px;"></a>
-                            <a href="https://x.com/IcelandTravelTO"><img src="https://raw.githubusercontent.com/Mario1502/email-signature-assets/main/ShouldBeTwitter.png" alt="Iceland Travel Twitter" style="width: 24px; height: auto; margin-right: 5px;"></a>
-                            <a href="https://www.instagram.com/icelandtravel/"><img src="https://raw.githubusercontent.com/Mario1502/email-signature-assets/main/Grrram.png" alt="Iceland Travel Instagram" style="width: 24px; height: auto; margin-right: 5px;"></a>
-                            <a href="https://www.facebook.com/IcelandTravelTourOperator"><img src="https://raw.githubusercontent.com/Mario1502/email-signature-assets/main/Facebook.png" alt="Iceland Travel Facebook" style="width: 24px; height: auto; margin-right: 5px;"></a>
-                        </td>
-                        <td width="15"></td>
-                        <td>
-                            <img src="https://raw.githubusercontent.com/Mario1502/email-signature-assets/main/TravelLife4Life4Life.jpg" alt="Travelife Partner Badge" style="width: 80px; height: auto;">
-                        </td>
-                    </tr>
-                </table>
+            <td></td>
+            <td style="padding: 5px;">
+                <p style="margin: 0; font-size: 12pt; font-weight: bold;">{{ user.first_name }}</p>
+            </td>
+        </tr>
+
+        <!-- Row 4 -->
+        <tr>
+            <td></td>
+            <td style="padding: 5px;">
+                <p style="margin: 0; font-size: 12pt; font-weight: bold;">{{ user.last_name }}</p>
+            </td>
+        </tr>
+
+        <!-- Row 5 -->
+        <tr>
+            <td></td>
+            <td style="padding: 5px;">
+                <p style="margin: 0; font-size: 10pt; color: #666;">{{ user.job_description }}</p>
+            </td>
+        </tr>
+
+        <!-- Row 6 -->
+        <tr>
+            <td></td>
+            <td style="padding: 5px;">
+                <p style="margin: 0; font-size: 10pt; color: #666;"><a href="mailto:{{ user.email }}" style="text-decoration: none; color: #445466;">{{ user.email }}</a></p>
+            </td>
+        </tr>
+
+        <!-- Row 7 -->
+        <tr>
+            <td></td>
+            <td style="padding: 5px;">
+                <p style="margin: 0; font-size: 10pt; color: #666;">Bíldshöfði 20 | 110 Reykjavík | Iceland</p>
+                <p style="margin: 0; font-size: 10pt; color: #666;">Tel: +354 578 2080 | <a href="https://www.nordicvisitor.com" style="text-decoration: none; color: #445466;">nordicvisitor.com</a> | <a href="mailto:info@nordicvisitor.com" style="text-decoration: none; color: #445466;">info@nordicvisitor.com</a></p>
+            </td>
+        </tr>
+
+        <!-- Row 8 -->
+        <tr>
+            <td></td>
+            <td style="padding: 5px;">
+                <a href="https://www.facebook.com/NordicVisitor" target="_blank" style="margin-right: 10px;">
+                    <img src="https://raw.githubusercontent.com/Mario1502/email-signature-assets/main/NV/FB.png" alt="Facebook" style="width: 18px; height: 18px;">
+                </a>
+                <a href="https://www.instagram.com/nordicvisitor/" target="_blank" style="margin-right: 10px;">
+                    <img src="https://raw.githubusercontent.com/Mario1502/email-signature-assets/main/NV/Insta.png" alt="Instagram" style="width: 18px; height: 18px;">
+                </a>
+                <a href="https://www.tripadvisor.com/Attraction_Review-g189970-d2287372-Reviews-Nordic_Visitor_Tours_Day_Tours-Reykjavik_Capital_Region.html" target="_blank" style="margin-right: 10px;">
+                    <img src="https://raw.githubusercontent.com/Mario1502/email-signature-assets/main/NV/TA.png" alt="Tripadvisor" style="width: 18px; height: 18px;">
+                </a>
+                <a href="https://twitter.com/nordicvisitor" target="_blank">
+                    <img src="https://raw.githubusercontent.com/Mario1502/email-signature-assets/main/NV/Twitter.png" alt="Twitter" style="width: 18px; height: 18px;">
+                </a>
             </td>
         </tr>
     </table>
-</body>
-</html>
+</div>
